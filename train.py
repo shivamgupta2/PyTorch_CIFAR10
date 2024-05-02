@@ -28,12 +28,12 @@ def main(args):
         trainer = Trainer(
             fast_dev_run=bool(args.dev),
             logger=logger if not bool(args.dev + args.test_phase) else None,
-            gpus=-1,
+            accelerator='auto',
             deterministic=True,
-            weights_summary=None,
+            #weights_summary=None,
             log_every_n_steps=1,
             max_epochs=args.max_epochs,
-            checkpoint_callback=checkpoint,
+            #checkpoint_callback=checkpoint,
             precision=args.precision,
         )
 
