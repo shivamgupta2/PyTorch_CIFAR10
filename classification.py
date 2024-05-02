@@ -16,7 +16,7 @@ import pickle
 adjoint_nrmse = {}
 def get_prob_vectors(dataset_path, model, num_classes=10):
     transform = torch.nn.Sequential(
-     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2471, 0.2435, 0.2616)),)
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2471, 0.2435, 0.2616)),)
     classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
     truth_prob_vectors = {}
